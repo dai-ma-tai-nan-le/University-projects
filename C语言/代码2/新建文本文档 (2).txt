@@ -1,0 +1,373 @@
+#include<string.h>
+struct kaishi
+{
+    int long num;
+    int long mima;
+};
+struct people
+{
+    int xuhao;
+    char name[20];
+    char minzu;//以民族首字母表示。
+    float shengao;
+    float tizhong;
+    int long ele;
+    int long shenfenzheng;
+    char sex;//男：L 女：M
+    char address[30];//省市。
+    int long qq;
+};
+int renshu=0;
+void zhuce(struct kaishi *wj,int n);
+void denglu(struct kaishi *wj1,int n);
+void tuichu(struct kaishi *wj,int n);
+void input(struct people *peo,int n);
+void output(struct people *peo,int n);
+void chaxun(struct people *peo,int n);
+void numchaxun(struct people *peo,int n);
+void namechaxun(struct people *peo,int n);
+void elechaxun(struct people *peo,int n);
+void shenfenzhengchaxun(struct people *peo,int n);
+void shanchu(struct people *peo,int n);
+void xiugai(struct people *peo,int n);
+int main()
+{
+    int meau();
+    int aj,n;
+    struct kaishi wj;
+    struct kaishi wj1;
+    struct people peo[100];
+    printf("请输几人<100\n");
+    scanf("%d",&n);
+    while(1)
+    {
+        aj=meau();
+        switch(aj)
+        {
+        case 1:
+            zhuce(&wj,1);
+            break;
+        case 2:
+            denglu(&wj1,1);
+            break;
+        case 3:
+            input(peo,n);
+            break;
+        case 4:
+            output(peo,n);
+            break;
+        case 5:
+            xiugai(peo,n);
+            break;
+        case 6:
+            chaxun(peo,n);
+            break;
+        case 7:
+            shanchu(peo,n);
+            output(peo,n);
+            break;
+        case 8:
+            tuichu(&wj,1);
+            break;
+        case 0:
+            printf("end");
+            exit(0);
+        default :
+            printf("error");
+        }
+    }
+}
+int meau()
+{
+    int a;
+    system("cls");
+    printf("人物信息管理系统\n");
+    printf("输入你的选择\n");
+    printf("1.注册\n");
+    printf("2.登录\n");
+    printf("3.输入人物信息\n");
+    printf("4.输出人物信息\n");
+    printf("5.修改人物信息\n");
+    printf("6.查询并输出人物信息\n");
+    printf("7.删除人物信息\n");
+    printf("8.退出\n");
+    printf("0.Exit\n");
+    scanf("%d",&a);
+    return a;
+}
+void zhuce(struct kaishi *wj,int n)
+{
+    FILE *fp;
+        system("cls");
+    if((fp=fopen("f1.txt","wb"))==NULL)
+    {
+        printf("can't open this file\n");
+        exit(1);
+    }
+    printf("输入你的账号和密码:\n");
+    scanf("%ld %ld",&(*wj).num,&(*wj).mima);
+    fprintf(fp,"%ld %ld",(*wj).num,(*wj).mima);
+    fclose(fp);
+}
+void denglu(struct kaishi *wj1,int n)
+{
+    int long a,b;
+    FILE *fp;
+        system("cls");
+    if((fp=fopen("f1.txt","rb"))==NULL)
+    {
+        printf("can't open this file\n");
+        exit(1);
+    }
+    fscanf(fp,"%ld %ld",&(*wj1).num,&(*wj1).mima);
+    fclose(fp);
+    printf("输入你的账号和密码:\n");
+    scanf("%ld %ld",&a,&b);
+    if((*wj1).num==a&&(*wj1).mima==b)
+    {
+         printf("登陆成功\n");
+    }
+        else
+            printf("登录失败\n");
+}
+void tuichu(struct kaishi *wj,int n)
+{
+        system("cls");
+    printf("退出成功！\n");
+}
+void input(struct people *peo,int n)
+{
+     int i;
+         system("cls");
+    printf("请输入序号,名字，民族(首字母),身高(m),体重(kg),电话,身份证,性别,地址,QQ\n");
+    for(i=renshu;i<renshu+n;i++)
+    {
+       scanf("%d %s %c %f %f %ld %ld %c %s %ld",&peo[i].xuhao,peo[i].name,&peo[i].minzu,&peo[i].shengao,&peo[i].tizhong,&peo[i].ele,&peo[i].shenfenzheng,&peo[i].sex,peo[i].address,&peo[i].qq);
+    }
+}
+void output(struct people *peo,int n)
+{
+     int i;
+         system("cls");
+     for(i=renshu;i<renshu+n;i++)
+     {
+         printf("序号，名字，民族(首字母),身高(m),体重(kg),电话,身份证,性别,地址，QQ\n");
+         printf("%d %s %c %.0f %.0f %ld %ld %c %s %ld",peo[i].xuhao,peo[i].name,peo[i].minzu,peo[i].shengao,peo[i].tizhong,peo[i].ele,peo[i].shenfenzheng,peo[i].address,peo[i].sex,peo[i].qq);
+     }
+}
+void chaxun(struct people *peo,int n)
+{
+      int a;
+          system("cls");
+    printf("1.按序号查询");
+    printf("2.按姓名查询");
+    printf("3.按电话查询");
+    printf("4.按身份证查询");
+    scanf("%d",&a);
+    getchar();
+    switch(a)
+    {
+    case 1:
+        numchaxun(peo,n);
+        break;
+    case 2:
+        namechaxun(peo,n);
+        break;
+    case 3:
+        elechaxun(peo,n);
+        break;
+    case 4:
+        shenfenzhengchaxun(peo,n);
+        break;
+    case 0:
+        exit(0);
+        break;
+    default:
+        printf("error");
+    }
+
+}
+void numchaxun(struct people *peo,int n)
+{
+    int a;
+    int i;
+        system("cls");
+    printf("输入查询的序号");
+    scanf("%d",&a);
+    for(i=renshu;i<renshu+n;i++)
+    {
+        if(a=peo[i].xuhao)
+        {
+             printf("%d %s %c %.0f %.0f %ld %ld %c %s %ld",peo[i].xuhao,peo[i].name,peo[i].minzu,peo[i].shengao,peo[i].tizhong,peo[i].ele,peo[i].shenfenzheng,peo[i].sex,peo[i].address,peo[i].qq);
+            break;
+            return;
+        }
+    }
+     printf("Not found!\n");
+}
+void namechaxun(struct people *peo,int n)
+{
+    char a[20];
+    int i;
+        system("cls");
+    printf("输入查询的姓名");
+    gets(a);
+    for(i=renshu;i<renshu+n;i++)
+    {
+        if(strcmp(peo[i].name,a)==0)
+        {
+            printf("%d %s %c %.0f %.0f %ld %ld %c %s %ld",peo[i].xuhao,peo[i].name,peo[i].minzu,peo[i].shengao,peo[i].tizhong,peo[i].ele,peo[i].shenfenzheng,peo[i].sex,peo[i].address,peo[i].qq);
+            break;
+            return;
+        }
+    }
+    printf("Not found!\n");
+}
+void elechaxun(struct people *peo,int n)
+{
+    int long a;
+    int i;
+        system("cls");
+    printf("输入查询的电话");
+    scanf("%ld",&a);
+    for(i=renshu;i<renshu+n;i++)
+    {
+        if(peo[i].ele=a)
+        {
+            printf("%d %s %c %.0f %.0f %ld %ld %c %s %ld",peo[i].xuhao,peo[i].name,peo[i].minzu,peo[i].shengao,peo[i].tizhong,peo[i].ele,peo[i].shenfenzheng,peo[i].sex,peo[i].address,peo[i].qq);
+            break;
+            return;
+        }
+    }
+    printf("Not found!\n");
+
+}
+void shenfenzhengchaxun(struct people *peo,int n)
+{
+     int long a;
+    int i;
+        system("cls");
+    printf("输入查询的身份证");
+    scanf("%ld",&a);
+    for(i=renshu;i<renshu+n;i++)
+    {
+        if(peo[i].shenfenzheng=a)
+        {
+            printf("%d %s %c %.0f %.0f %ld %ld %c %s %ld",peo[i].xuhao,peo[i].name,peo[i].minzu,peo[i].shengao,peo[i].tizhong,peo[i].ele,peo[i].shenfenzheng,peo[i].sex,peo[i].address,peo[i].qq);
+            break;
+            return;
+        }
+    }
+    printf("Not found!\n");
+}
+void shanchu(struct people *peo,int n)
+{
+   char a[10];
+     system("cls");
+   printf("删除全部输入all，部分删除输入one\n");
+   scanf("%s",a);
+   if(strcmp(a,"all")==0)
+   {
+       renshu=0;
+       printf("删除成功\n");
+   }
+    else if(strcmp(a,"one")==0)
+    {
+        struct people *p=NULL;
+        int b;
+        int i,j,k=0;
+        printf("请输入要删除人的序号");
+        scanf("%d",&b);
+        for(i=0;i<renshu;i++)
+        {
+            if(strcmp(b,peo[i].xuhao)==0)
+            {
+                k=1;
+                j=i;
+                break;
+            }
+        }
+        if(k)
+        {
+            if(renshu=1)
+            {
+                p=&peo[0].xuhao;
+                free(p);
+                renshu=0;
+            }
+        else
+        {
+            for(i=j;i<renshu;i++)
+            {
+                peo[i]=peo[i+1];
+            }
+            renshu=renshu-1;
+        }
+         printf("删除成功\n");
+        }
+    }
+    else
+    {
+        printf("输入错误\n");
+        shanchu(peo,n);
+    }
+}
+void xiugai(struct people *peo,int n)
+{
+    char *p1;
+    int a,num,x,i,j=0;
+    char ch;
+    system("cls");
+    printf("输入要修改人的序号");
+    scanf("%d",&num);
+    for(i=renshu;i<renshu+n;i++)
+    {
+        if(num=peo[i].xuhao)
+        {
+            j=1;
+            break;
+        }
+    }
+    if(j=0)
+    {
+        printf("未查找到要修改的人物信息");
+        return;
+    }
+    else
+    {
+        printf("序号，名字，民族(首字母),身高(m),体重(kg),电话,身份证,性别,地址，QQ\n");
+         printf("%d %s %c %.0f %.0f %ld %ld %c %s %ld",peo[i].xuhao,peo[i].name,peo[i].minzu,peo[i].shengao,peo[i].tizhong,peo[i].ele,peo[i].shenfenzheng,peo[i].address,peo[i].sex,peo[i].qq);
+    }
+    printf("是否确认修改此学生成绩信息？如需修改请安(Y)，如不需修改学生信息请安(N)返回__: ");
+    ch=getchar();
+	if(ch=='y'||ch=='Y')
+		{
+		   system("cls");
+		   printf("请输入序号:");
+		   scanf("%d",&peo[i].xuhao);//以前的序号
+		    printf("请输入姓名:");
+		    scanf("%s",peo[i].name);
+		     printf("请输入民族:");
+		     scanf("%c",&peo[i].minzu);
+		     printf("请输入身高:");
+		     scanf("%f",&peo[i].shengao);
+		     printf("请输入体重:");
+		     scanf("%f",&peo[i].tizhong);
+		     printf("请输入电话:");
+		     scanf("%ld",&peo[i].ele);
+		     printf("请输入身份证:");
+		     scanf("%ld",&peo[i].shenfenzheng);
+		     printf("请输入性别:");
+		     scanf("%c",&peo[i].sex);
+		     printf("请输入地址:");
+		     scanf("%s",&peo[i].address);
+		     printf("请输入QQ:");
+		     scanf("%ld",&peo[i].qq);
+            printf("\n OK 此人信息已修改完成。");
+            return;
+		}
+	if(ch=='n'||ch=='N')
+    {
+        return;
+    }
+}

@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct people
+{
+    int xuhao;
+    char mane[20];
+    float shengao;
+    float tizhong;
+    int long ele;
+    int long shenfenzheng;
+    char sex;//男：L 女：M
+    char address[30];//国家，省市。
+    int long qq;
+    char buchong[100];
+};
+int main()
+{
+    int meau();
+    int aj,n;
+    int long c,b;
+    int x,y=1;
+    int long c1=10086,b1=10011;
+    struct people peo[100];
+    printf("请输几人<100\n");
+    scanf("%d",&n);
+    while(y)
+    {
+            system("cls");
+            printf("人物信息管理系统");
+            printf("输入你的选择\n");
+            printf("1.登录\n");
+            printf("2.退出\n");
+            printf("0.Exit\n");
+            scanf("%d",&aj);
+        switch(aj)
+        {
+        case 1:
+            printf("输入你的账号和密码:\n");
+    scanf("%ld %ld",&c,&b);
+    if(c1==c&&b1==b)
+    {
+         printf("登陆成功\n");
+         while(1)
+         {
+             system("cls");
+             printf("人物信息管理系统");
+             printf("输入你的选择\n");
+             printf("1.输入人物信息\n");
+             printf("2.输出人物信息\n");
+             printf("3.查询人物信息\n");
+             printf("4.删除人物信息\n");
+             printf("5.添加人物信息\n");
+             printf("6.修改人物信息\n");
+             printf("0.Exit\n");
+             scanf("%d",&x);
+             switch(x)
+        {
+        case 1:
+            
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 0:
+            printf("end");
+            exit(0);
+        default :
+            printf("error");
+        }
+         }
+    }
+        else
+        {
+            printf("登录失败\n");
+            printf("请重新登录\n");
+            scanf("%ld %ld",&c,&b);
+        }
+            break;
+        case 2:
+            y=0;
+            break;
+        case 0:
+            printf("end");
+            exit(0);
+        default :
+            printf("error");
+        }
+    }
+}
