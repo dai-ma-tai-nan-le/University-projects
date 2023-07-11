@@ -1,0 +1,25 @@
+table,caption,p{
+	
+	
+	
+}
+table,tr,td{
+	border:1px solid silver;
+	border-collapse:collapse ;
+}
+table,tr,td,th{
+	border: 1px solid silver;
+	border-collapse: collapse;
+	text-align: center;/*水平居中*/
+	vertical-align:middle;/*垂直居中*/
+	width: 1200px;
+}
+#a{
+	background: blue;
+	letter-spacing: 30px;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 100px;
+	height: 100px;
+}

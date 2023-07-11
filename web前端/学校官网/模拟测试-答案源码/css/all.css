@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+#top {
+	height: 5px;
+	background-color: #0b6cb8;
+}
+
+#logo {
+	width: 996px;
+	height: 116px;
+	margin: 0 auto;
+}
+
+#logo img {
+	padding-top: 13px;
+}
+
+
+
+#menu {
+	height: 50px;
+	background-color: #0B6CB8;
+}
+
+#menu-list {
+	width: 996px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#menu ul li {
+	float: left;
+	line-height: 50px;
+}
+
+#menu ul li a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 0 24.5px;
+}
+
+#menu ul li a:hover {
+	background-color: #0a5894;
+}
+
+#main {
+	width: 996px;
+	margin: 0 auto;
+}
+
+#main1 p {
+	width: 996px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-image: url(../img/jifang203.jpg);
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	padding: 50px 0px;
+	line-height: 40px;
+}
+
+.clear {
+	clear: both;
+}
+
+#main2-left {
+	float: left;
+	width: 479px;
+	height: 366px;
+	line-height: 366px;
+	border: 5px solid #0B6CB8;
+}
+
+#main a {
+	display: block;
+	color: #0B6CB8;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+#main a:hover {
+	background-color: #0B6CB8;
+	color: white;
+}
+
+#main2-right {
+	float: right;
+	width: 479px;
+	border: 5px solid #0B6CB8;
+}
+
+#main2-right form {
+	width: 479px;
+	height: 366px;
+	display: block;
+	padding-left: 70px;
+	line-height: 45px;
+}
+
+#main3 {
+	margin: 20px 0px;
+}
+
+#main3-1,#main3-2,#main3-3,#main3-4 {
+	float: left;
+	width: 224px;
+	height: 200px;
+	line-height: 200px;
+	border: 5px solid #0B6CB8;
+}
+
+#main3-1,#main3-2,#main3-3 {
+	margin-right: 20px;
+}
+
+#footer {
+	height: 92px;
+	line-height: 92px;
+	text-align: center;
+	background-color: #0A5894;
+	font-size: 13px;
+	color: white;
+}
+
+#ex {
+	position: fixed;
+	right: 0px;
+	top: 300px;
+	height: 80px;
+	line-height: 40px;
+	text-align: center;
+	width: 80px;
+	font-size: 16px;
+	background-color: #FF0000;
+	color: white;
+}

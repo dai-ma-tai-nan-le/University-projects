@@ -1,0 +1,221 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+body{
+	background-image: url(../img/backgr.png);
+}
+#main{
+	width: 1000px;
+	margin: 0 auto;
+}
+#logo{
+	padding-top: 20px;
+}
+#banner{
+	margin-top: 20px;
+}
+#banner-left{
+	float: left;
+}
+#banner-left img{
+	width: 777px;
+	height: 260px;
+}
+#banner-right {
+	float: right;
+}
+#banner-right a:hover{/*透明度*/
+	filter: alpha(opacity:70);/*IE*/
+	-moz-opacity: 0.7;/*firefox*/
+	opacity: 0.3;/*其他*/
+}
+a{
+	text-decoration: none;
+	color: #ffffff;
+}
+.clear{
+	clear: both;
+}
+.newa{
+	width: 490px;
+	height: 200px;
+	float: left;
+	background-color: #542bc9;
+	margin-top: 20px;
+}
+.newb{
+	width: 490px;
+	height: 200px;
+	float: right;
+	background-color: #cfab04;
+	margin-top: 20px;
+}
+.newc{
+	width: 490px;
+	height: 200px;
+	float: left;
+	background-color: #f45439;
+	margin-top: 20px;
+}
+.newd{
+	width: 490px;
+	height: 200px;
+	float: right;
+	background-color: #39925d;
+	margin-top: 20px;
+}
+.newtitiea{
+	height: 54px;
+	width: 450px;
+	border-bottom: 1px solid white;
+	background: url(../img/aa.png) no-repeat left center;
+	margin: 0 auto;
+}
+.newtitieb{
+	height: 54px;
+	width: 450px;
+	border-bottom: 1px solid white;
+	background: url(../img/bb.png) no-repeat left center;
+	margin: 0 auto;
+}
+.newtitiec{
+	height: 54px;
+	width: 450px;
+	border-bottom: 1px solid white;
+	background: url(../img/cc.png) no-repeat left center;
+	margin: 0 auto;
+}
+.newtitied{
+	height: 54px;
+	width: 450px;
+	border-bottom: 1px solid white;
+	background: url(../img/dd.png) no-repeat left center;
+	margin: 0 auto;
+}
+h2{
+	font-size: 24px;
+	color: #FFFFFF;
+	padding-left: 50px;
+	padding-top: 12px;
+	font-weight: normal;
+}
+ul{
+	list-style-type: none;
+}
+.newscon{
+	width: 400px;
+	margin-left: 70px;
+	margin-top: 10px;
+}
+.newscon ul li{
+	height: 40px;
+	line-height: 40px;
+}
+.beirong{
+	float: left;
+}
+.data{
+	float: right;
+}
+
+
+
+
+
+
+
+.maina{
+	width: 982px;
+	margin: 0 auto;
+}
+.a{
+	height: 42px;
+	width: 952px;
+	line-height: 42px;
+	color: #FFFFFF;
+	font-size: 18px;
+	border: 1px solid white;
+	margin-top: 100px;
+	padding-left: 30px;
+	border-radius: 5px;
+}
+.b{
+	width: 982px;
+	padding-top: 60px;
+	margin: 0 auto;
+}
+.b img{
+	float: left;
+	margin-right: 32px;
+	margin-top: 32px;
+}
+.b .c{
+	margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

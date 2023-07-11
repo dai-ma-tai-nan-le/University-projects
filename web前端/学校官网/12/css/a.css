@@ -1,0 +1,160 @@
+#head{
+	height: 171px;
+}
+#head-1{
+	border-top: 5px solid #0b6cb8;
+}
+#head-2{
+	width: 996px;
+	height: 116px;
+	margin: 0 auto;
+	margin-top: 13px;
+}
+#head-3{
+	height: 50px;
+	background-color: #0b6cb8;
+	margin-top: -20px;
+}
+#head-33{
+	width: 996px;
+	margin: 0 auto;
+}
+#head-33 ul{
+	list-style-type: none;
+}
+#head-33 ul li{
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	margin-right: 46px;
+}
+#middle{
+	width: 996px;
+	margin: 0 auto;
+}
+#middle-1{
+	height: 260px;
+	width: 996px;
+	background:url(../img/jifang203.jpg)no-repeat;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+#middle-1 p{
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	padding: 50px 0 50px 0;
+	line-height: 40px;
+}
+#middle-11{
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	background: red;
+	position: fixed;
+	right: 0;
+	top: 300px;
+}
+#middle-2{
+	margin-top: 20px;
+}
+#middle-21{
+	width: 479px;
+	height: 366px;
+	border: 5px solid #0b6cb8;
+	float: left;
+}
+#middle-21 p{
+	font-size: 16px;
+	text-align: center;
+	color: #0B6CB8;
+	line-height: 366px;
+}
+#middle-22{
+	width: 479px;
+	height: 366px;
+	border: 5px solid #0b6cb8;
+	float: right;
+}
+#middle-221{
+	width: 400px;
+	height: 350px;
+	margin-left: 70px;
+	line-height: 45px;
+	margin-top: 10px;
+}
+.clear{
+	clear: both;
+}
+#middle-3{
+	width: 996px;
+	height: 210px;
+	margin-top: 20px;
+}
+#middle-31{
+	width: 224px;
+	height: 210px;
+	border: 5px solid #0B6CB8;
+    float: left;
+    margin-right: 20px;
+}
+#middle-31 p{
+	font-size: 16px;
+	text-align: center;
+	color: #0B6CB8;
+	line-height: 210px;
+}
+#middle-32{
+	width: 224px;
+	height: 210px;
+	border: 5px solid #0B6CB8;
+    float: left;
+    margin-right: 20px;
+}
+#middle-32 p{
+	font-size: 16px;
+	text-align: center;
+	color: #0B6CB8;
+	line-height: 210px;
+}
+#middle-33{
+	width: 224px;
+	height: 210px;
+	border: 5px solid #0B6CB8;
+    float: left;
+    margin-right: 20px;
+}
+#middle-33 p{
+	font-size: 16px;
+	text-align: center;
+	color: #0B6CB8;
+	line-height: 210px;
+}
+#middle-34{
+	width: 224px;
+	height: 210px;
+	border: 5px solid #0B6CB8;
+    float: left;
+    margin-right: none;
+}
+#middle-34 p{
+	font-size: 16px;
+	text-align: center;
+	color: #0B6CB8;
+	line-height: 210px;
+}
+#footer{
+	height: 92px;
+	margin: 0 auto;
+	background: #0B6CB8;
+}
+#footer p{
+	font-size: 13px;
+	text-align: center;
+	color: #0a5894;
+	line-height: 92px;
+	
+}

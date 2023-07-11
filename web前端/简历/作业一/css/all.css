@@ -1,0 +1,29 @@
+table,tr,td{
+	border: 1px solid silver;
+	border-collapse: collapse;
+	text-align: center;/*水平居中*/
+	vertical-align:middle;/*垂直居中*/
+	width: 1200px;
+}
+#a{
+	background: greenyellow;
+	letter-spacing: 30px;
+	font-size: 50px;
+	font-weight: bolder;
+	text-align: center;
+	line-height: 100px;
+	height: 100px;
+}
+.one{
+	height: 50px;
+}
+.two{
+	height: 60px;
+	text-align: center;/*水平居中*/
+	vertical-align:middle;/*垂直居中*/
+	font-weight: bold;/*字体加粗*/
+	background: green;
+}
+.three{
+	height: 120px;
+}

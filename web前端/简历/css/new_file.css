@@ -1,0 +1,30 @@
+table,tr,td,th{
+	border: 1px solid silver;
+	border-collapse: collapse;
+	text-align: center;/*水平居中*/
+	vertical-align:middle;/*垂直居中*/
+	width: 1200px;
+
+}
+.heads{
+	background: rgb(0,255,0);
+	letter-spacing: 30px;/*字间距*/
+	font-size: 50px;
+	height: 100px;
+	font-weight: bold;/*字体加粗*/
+}
+
+.one{
+	height: 50px;
+}
+.two{
+	height: 60px;
+	text-align: center;/*水平居中*/
+	vertical-align:middle;/*垂直居中*/
+	font-weight: bold;/*字体加粗*/
+	background: rgb(153,51,153);
+}
+.three{
+	height: 120px;
+}
+

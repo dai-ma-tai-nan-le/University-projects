@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册表单</title>
+		<link rel="stylesheet" href="../css/表单.css" />
+	</head>
+	<body>
+		<form>
+			<label>昵称：</label><input type="text"/><br />
+			<label>密码：</label><input type="password"/><br />
+			<label>邮箱：</label><input type="text"/>
+			<select>
+				<option>qq.com</option>
+				<option>126.com</option>
+				<option>163.com</option>
+				<option>139.com</option>
+			</select><br />
+			<label>性别：</label><input type="radio" name="sex" checked="checked"/><label>男</label>
+			                   <input type="radio" name="sex" /><label>女<label><br />
+			<label>爱好:</label><input type="checkbox" name="sport"/><label>旅游</label>
+			                  <input type="checkbox" name="sport"/><label>摄影</label>
+			                  <input type="checkbox" name="sport"/><label>运动</label><br />
+			         <form method="post">
+			         	<label>个人简介:</label><br />
+			         <textarea rows="10" cols="35"></textarea><br />
+			         </form>
+			               
+			<label>上传个人照片</label><br />
+			<input type="file"" value="选择文件"/><br />
+			<div id="a">
+				<input type="button" value="立即注册"/>
+			</div>
+		</form>
+	</body>
+</html>
