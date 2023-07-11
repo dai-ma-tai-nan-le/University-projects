@@ -1,0 +1,81 @@
+#include<iostream>
+#include<string>
+#include<time.h>
+#include<stdlib.h>
+using namespace std;
+double level[6] = {0.02,0.008,0.03,0.02,0.03,0.08};
+int money[6] = {5000,8000,2000,3000,2000,1000};
+
+int index(string type)
+{
+	string salestype[6] = {"手机","电脑","打印机","相机","平板电脑","外设"};
+	for(int i=0;i<6;i++)
+	{
+		if(salestype[i]==type)
+			return i;
+	}
+	return -1;
+}
+
+
+
+class Date
+{
+public:
+	int year;
+	Date(int x=0)
+	{
+		year = x;
+	}
+};
+
+class Employee
+{
+protected:
+	string name;
+	int num;
+	Date in;
+	float salary;
+public:
+	Employee(string x,int y,Date z)
+	{
+		name = x;
+		num = y;
+		in = z;
+	}
+};
+
+
+class Salesman:public Employee
+{
+private:
+	string type;
+	int count;
+public:
+	int getWorkTime()
+	{
+		time_t curtime;
+		time(&curtime);
+		int end = atoi(ctime(&curtime)+20);
+		return (end-in.year);
+	}
+	Salesman(string name,int num,Date in,string type,int count):Employee(name,num,in)
+	{
+		this->type = type;
+		this->count = count;
+		this->salary = getWorkTime()*100+count*level[index(type)]*money[index(type)];
+	}
+	void show()
+	{
+		cout<<"姓名"<<name<<endl;
+		cout<<"类别"<<type<<endl;
+		cout<<"工资"<<salary<<endl;
+	}
+};
+
+int main()
+{
+	Salesman man("张三",1001,2000,"电脑",10);
+	man.show();
+	return 0;
+}

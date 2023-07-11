@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1589439818 source:c:\users\pc\desktop\c++\point\main.cpp
+	"a.h"
+
+1589439628 c:\users\pc\desktop\c++\point\a.h
+	<iostream>
+	<math.h>
+
+1589439818 source:c:\users\pc\desktop\c++\point\a.cpp
+	"a.h"
+

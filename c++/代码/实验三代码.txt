@@ -1,0 +1,155 @@
+#include<iostream>
+using namespace std;
+class Point
+{
+private:
+	int x,y;
+public:
+	Point()
+	{
+		x = y = 0;
+	}
+	Point(int m)
+	{
+		x = m;
+		y = 0;
+	}
+	Point(int m,int n)
+	{
+		x = m;
+		y = n;
+	}
+	void show()
+	{
+		cout<<"("<<x<<","<<y<<")"<<endl;
+	}
+	int getX()
+	{
+		return x;
+	}
+	int getY()
+	{
+		return y;
+	}
+};
+main()
+{
+	Point p[3] = {Point(),Point(1),Point(3,3)};
+//	for(int i=0;i<3;i++)
+//		p[i].show();
+	for(int i=0;i<3;i++)
+		cout<<p[i].getX()<<","<<p[i].getY()<<endl;
+}
+
+
+
+
+
+
+
+
+
+
+#include<iostream>
+#include<string.h>
+#include<windows.h>
+using namespace std;
+class Birthday
+{
+private:
+	int year,month,day;
+	char * name;
+public:
+	Birthday(int y=2020,int m=5,int d=26)
+	{
+		year = y;
+		month = m;
+		day = d;
+		name = new char[20];
+		strcpy(name,"Zhang");
+		cout<<"构造函数被调用"<<endl;
+	}
+	Birthday(const Birthday &temp)
+	{
+		year = temp.year;
+		month = temp.month;
+		day = temp.day;
+		name = new char[20];
+		strcpy(name,temp.name);
+		cout<<"拷贝构造函数被调用"<<endl;
+	}
+	~Birthday()
+	{
+		cout<<year<<"析构"<<endl;
+		delete name;
+	}
+	void setValue(int y,int m,int d,char * p)
+	{
+		year = y;
+		month = m;
+		day = d;
+		strcpy(name,p);
+	}
+	char * getName()
+	{
+		return name;
+	}
+};
+int main()
+{
+	Birthday a;
+	Birthday b(a);
+	char temp[20] = "Lee";
+	b.setValue(0,0,0,temp);
+	cout<<a.getName()<<endl;
+	cout<<b.getName()<<endl;
+	system("pause");
+	return 0;
+}
+
+
+
+
+
+
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+int Length = 3;
+class Student
+{
+public:
+	int num;
+	string name;
+	int score[3];
+public:
+	Student(int n,string na,int * p):num(n),name(na)
+	{
+		for(int i=0;i<3;i++)
+			score[i] = *(p+i);
+	}
+	static void getAver(Student * temp,int length)
+	{
+		int sum[3] = {0};
+		int i,j;
+		for(i=0;i<3;i++)
+			for(j=0;j<length;j++)
+				sum[i] += (*(temp+j)).score[i];
+		for(i=0;i<3;i++)
+			cout<<"第"<<i+1<<"门课程的平均成绩为:"<<sum[i]/3<<endl;
+	}
+};
+int main()
+{
+	int a[3][3] = {60,70,80,60,70,80,60,70,80};
+	Student stu[3] = {Student(1,"Zhao",*a),Student(2,"Qian",*(a+1)),Student(3,"Sun",*(a+2))};
+	Student::getAver(stu,Length);
+	return 0;
+}
+
+
+
+
+
