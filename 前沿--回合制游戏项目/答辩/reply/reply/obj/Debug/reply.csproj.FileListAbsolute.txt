@@ -1,0 +1,7 @@
+C:\soft\前沿技术\dabian\reply\reply\bin\Debug\reply.exe.config
+C:\soft\前沿技术\dabian\reply\reply\bin\Debug\reply.exe
+C:\soft\前沿技术\dabian\reply\reply\bin\Debug\reply.pdb
+C:\soft\前沿技术\dabian\reply\reply\obj\Debug\reply.csprojAssemblyReference.cache
+C:\soft\前沿技术\dabian\reply\reply\obj\Debug\reply.csproj.CoreCompileInputs.cache
+C:\soft\前沿技术\dabian\reply\reply\obj\Debug\reply.exe
+C:\soft\前沿技术\dabian\reply\reply\obj\Debug\reply.pdb
