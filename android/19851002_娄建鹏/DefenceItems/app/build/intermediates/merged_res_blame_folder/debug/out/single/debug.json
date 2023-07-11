@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\layout_spinner_dropdown.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\layout\\spinner_dropdown.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\xml_network.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\xml\\network.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_second.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\layout\\activity_second.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_third.xml.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\layout\\activity_third.xml"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\code\\DefenceItems\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\code\\DefenceItems\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    }
+]
