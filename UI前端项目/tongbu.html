@@ -1,0 +1,603 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>同步课程</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	}
+img{
+	border:0;
+	}
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+	}
+body{
+	font-family:"微软雅黑";
+	background-color:#fafafa;
+	}
+a{
+   text-decoration:none;
+	}
+ul{
+	 list-style:none;
+	 }
+.in{
+	width:1181px;
+	margin:0 auto;
+	}
+.clear{
+	clear:both;
+	}
+
+#header{
+	height:80px;	
+	}
+.head{
+	height:80px;
+	box-shadow:0 3px 5px 0 #dddfe2;
+	}
+.logo{
+	float:left;
+	margin-top:14px;
+	}
+.top-r{
+	height:80px;
+	width:950px;
+	float:right;
+	}
+.top-r ul{
+	height:80px;
+	float:right;
+	}
+.top-r li{
+	float:left;
+	}
+	
+#li2{
+	background-color:#80c4ae;
+	}
+#li2 a{
+	color:#fff;
+	}
+#li4{
+	margin-right:93px;
+	}
+#li6 a{
+	display:inline;
+	}
+.top-r a{
+	color:#333;
+	display:block;
+	height:80px;
+	width:108px;
+	text-align:center;
+	font-size:16px;
+	line-height:80px;
+	}
+.top-r a:hover{
+	background-color:#80c4ae;
+	}
+.ssk{
+	width:280px;
+	height:36px;
+	border:1px #81cfbd solid;
+	border-radius:3px;
+	margin-top:22px;
+	margin-right:22px;
+	}
+.ssk-l{
+	width:68px;
+	height:36px;
+	border-right:1px #81cfbd solid;
+	float:left;
+	}
+.ssk-l h2{
+	height:36px;
+	line-height:36px;
+	font-size:14px;
+	color:#81cfbd;
+	text-align:center;
+	}
+.kc{
+	float:left;
+	width:45px;
+	height:36px;
+	margin-left:4px;
+	}
+.tl{
+	float:right;
+	margin-right:5px;
+	line-height:36px;
+	}
+.ssk-r{
+	float:right;
+	width:210px;
+	height:36px;
+	}
+.ss{
+	width:165px;
+	height:36px;
+	line-height:36px;
+	font-size:12px;
+	color:#a9a9a9;
+	float:left;
+	margin-left:5px;
+	}
+#ssan{
+	float:right;
+	}
+#ssan a{
+	display:inline;
+	height:36px;
+	line-height:36px;
+	}
+
+#banner{
+	height:600px;
+	padding-top:14px;
+	}
+.b-left{
+	float:left;
+	box-shadow:0 3px 5px 3px #e4e4e4;
+	}
+.b-right{
+	height:600px;
+	margin-top:40px;
+	float:right;
+	margin-left:24px;
+	}
+.b-r-t{
+	margin-top:15px;
+	height:208px;
+	}
+.t0{
+	font-size:22px;
+	line-height:60px;
+	color:#3e3e3e;
+	}
+.t1{
+	font-size:14px;
+	line-height:30px;
+	color:#3e3e3e;
+	float:left;
+	margin-left:10px;
+	}
+.b-r-b{
+	margin-top:14px;
+	height:88px;
+	}
+.t3{
+	margin-top:155px;
+	font-size:14px;
+	line-height:30px;
+	color:#3e3e3e;
+	margin-left:8px
+	}
+.t2{
+	color:#ff6666;
+	}
+.jq{
+	margin-top:136px;
+	height:56px;
+	margin-left:24px;
+	}
+.jq1{
+	font-size:30px;
+	margin-top:12px;
+	line-height:52px;
+	text-align:center;
+	margin:0 auto;
+	color:#74c6b3;
+	float:left;
+	}
+.mfsx{
+	float:right;
+	width:134px;	
+	height:50px;
+	border:2px #74c6b3 solid;
+	font-size:16px;
+	line-height:52px;
+	color:#74c6b3;
+	text-align:center;
+	border-radius:5px;
+	}
+.gm{
+	height:48px;
+	margin-top:10px;
+	width:265px;
+	background-color:#74c6b3;
+	line-height:48px;
+	color:#fff;
+	}
+.gm a{
+	float:left;
+	font-size:16px;
+	line-height:48px;
+	text-align:center;
+	height:48px;
+	color:#fff;
+	width:130px;
+	display:block;
+	}
+.l{
+	float:left;
+	font-size:18px;
+	}
+.a2{
+	float:right;
+	}
+
+#link{
+	height:176px;
+	}
+.back{
+	height:157px;
+	box-shadow:0 3px 5px 3px #e4e4e4;
+	}
+.sz{
+	margin-top:4px;
+	line-height:60px;
+	font-size:20px;
+	margin-left:22px;
+	color:#474747;
+	}
+.xia{
+	height:72px;
+	width:1181px;
+	}
+.xia-l{
+	width:280px;
+	height:72px;
+	float:left;
+	}
+.x-l{
+	margin-left:30px;
+	float:left;
+	}
+.x-r{
+	margin-left:19px;
+	font-size:18px;
+	line-height:33px;
+	color:#333333;
+	float:left;
+	}
+.xian{
+	height:50px;
+	margin-top:9px;
+	text-align:center;
+	margin-left:28px;
+	border-right:1px #74c6b3 solid;
+	float:right;
+	}
+.xia-r{
+	width:881px;
+	height:72px;
+	float:left;
+	}
+.xia-r p{
+	margin-left:34px;
+	font-size:16px;
+	line-height:25px;
+	color:#666666;
+	}
+
+#main{
+	height:1225px;
+	}
+.shang{
+	height:66px;
+	margin-bottom:15px;
+	box-shadow:0 3px 5px 3px #e4e4e4;
+	}
+.shang ul li{
+	float:left;
+	margin-right:34px;
+	}
+.shang a{
+	text-align:center;
+	font-size:14px;
+	line-height:66px;
+	display:block;
+	height:66px;
+	width:80px;
+	color:#333;
+	}
+.shang a:hover{
+	background-color:#80c4ae;
+	}
+.li1{
+	margin-left:500px;
+	background-color:#80c4ae;
+	}
+.li1 a{
+	color:#fff;
+	}
+.zhong{
+	height:994px;
+	width:1181px;
+	background-color:#fff;}
+.txt1{
+	height:52px;
+	}	
+.tx1{
+	font-size:16px;
+	line-height:50px;
+	text-align:center;
+	float:left;
+	margin-left:42px;
+	color:#333333;
+	}
+.b1{
+	float:right;
+	
+	}	
+.sp{
+	height:40px;
+	width:1100px;
+	margin-left:42px;
+	}
+.img{
+	float:left;
+	margin-top:9px;
+	}
+.test{
+	float:left;
+	margin-left:17px;
+	line-height:40px;
+	font-size:14px;
+	}
+.time{
+	float:right;
+	line-height:40px;
+	font-size:12px;
+	color:#787878;
+	}
+.sp a{
+	color:#3a3a3a;
+	}
+
+.di{
+	height:106px;
+	padding-top:46px;
+	background-color:#fafafa;
+	}
+.di a{
+	margin-left:505px;
+	font-size:22px;
+	text-align:center;
+	color:#74c6b3;
+	text-decoration:underline;
+	}
+
+#footer{
+	height:200px;
+	padding-top:64px;
+	background-color:#333333;
+	}
+#footer p{
+	line-height:38px;
+	font-size:12px;
+	color:#f0f2f5;
+	text-align:center;
+	}
+#footer span{
+	margin-left:10px;
+	margin-right:8px;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header">
+	<div class="head">
+    	<div class="in">
+        	<div class="logo"><img src="images/images_05.jpg"></div>
+            <div class="top-r">
+            	<ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li id="li2"><a href="tongbu.html">同步课程</a></li>
+                    <li><a href="zaixian.html">在线练习</a></li>
+                    <li id="li4"><a href="#">精品课程</a></li>
+                    <li><div class="ssk">
+                    		<div class="ssk-l">
+                            	<div class="kc"><h2>课程</h2></div>
+                                <div class="tl"><img src="images/1_06.jpg"></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="ssk-r">
+                            	<div class="ss">搜索感兴趣的内容</div>
+                                <div id="ssan"><img src="images/1_04.jpg"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="li6"><a href="#">登录</a>&nbsp;&nbsp;/&nbsp;<a href="#">注册</a></li>
+                </ul>
+        </div>
+    </div>
+</div>
+
+<div id="banner">
+	<div class="in">
+    	<div class="b-left"><img src="images/2_13.jpg"></div>
+        <div class="b-right">
+        	<div class="b-r-t">
+            	<p class="t0">【2019年秋季] 初三数学班</p>
+                <p class="t1">年级科目：初三数学<br>课时数量：15课时<br>开课时间：09月30日—12月20日<br>有效期至：2020年12月20日</p>
+            <div class="b-r-b">
+                <p class="t3">距报名截止仅剩<br>
+                <span class="t2">145</span>天
+                <span class="t2">23</span>时
+                <span class="t2">32</span>分
+                <span class="t2">45</span>秒</p>
+            </div>
+            </div>
+            <div class="jq">
+            	<div class="jq1"><p>¥199</p></div>
+                <div class="mfsx"><p>免费试学</p></div>
+            </div>
+            <div class="gm"><a href="#">¥199单独购买</a><span class="l">|</span><a href="#" class="a2">¥99拼团</a></div>
+        </div>
+    </div>
+</div>
+
+<div id="link">
+	<div class="in">
+    	<div class="back">
+        	<div class="sz">授课师资</div>
+            <div class="xia">
+            	<div class="xia-l">
+                	<div class="x-l"><img src="images/2_18.jpg"></div>
+                    <div class="x-r">
+                    	<p>李晓明<br>小U课堂高级讲师</p>
+                    </div>
+                    <div class="xian"></div>
+                </div>
+                <div class="xia-r">
+                	<p>多年IT行业从业经验，精通常用的Web开发技术，熟悉主流的CMS、商城、论坛 等PHP开源产品，具有丰富的建站及二<br>次开发经验，多个大型ERP系统的开发实 践经验，精通常用的PHP开发框架，对服务器架构及服务器日常运维等方面及<br>后台系统有一定的研究。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+	<div class="in">
+    	<div class="shang">
+        	<ul>
+            	<li class="li1"><a href="#">课程目录</a></li>
+                <li class="xq"><a href="#">课程详情</a></li>
+            </ul>
+        </div>
+        <div class="zhong">
+        	<div class="txt1">
+            	<div class="tx1">第一章：公开课（含4期）</div>
+                <div class="b1"><img src="images/2_23.jpg"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第0节：化学的研究对象和研究方法</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第1节：离子反应</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第2节：氧化还原反应</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>   	
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第3节：钠及其化合物</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="txt1">
+            	<div class="tx1">第二章：公开课（含4期）</div>
+                <div class="b1"><img src="images/2_24.jpg"></div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第0节：化学的研究对象和研究方法</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第1节：离子反应</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第2节：氧化还原反应</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>   	
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第3节：钠及其化合物</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="txt1">
+            	<div class="tx1">第三章：公开课（含4期）</div>
+                <div class="b1"><img src="images/2_23.jpg"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="txt1">
+            	<div class="tx1">第四章：公开课（含4期）</div>
+                <div class="b1"><img src="images/2_23.jpg"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="txt1">
+            	<div class="tx1">第五章：公开课（含4期）</div>
+                <div class="b1"><img src="images/2_23.jpg"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="txt1">
+            	<div class="tx1">第六章：公开课（含4期）</div>
+                <div class="b1"><img src="images/2_24.jpg"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第0节：化学的研究对象和研究方法</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第1节：离子反应</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第2节：氧化还原反应</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>   	
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第3节：钠及其化合物</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="txt1">
+            	<div class="tx1">第七章：公开课（含4期）</div>
+                <div class="b1"><img src="images/2_24.jpg"></div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第0节：化学的研究对象和研究方法</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第1节：离子反应</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+            <div class="sp">	
+                <div class="img"><a href="#"><img src="images/images_20.jpg"></a></div>
+                <div class="test"><a href="#">第2节：氧化还原反应</a></div>
+                <div class="time">2020.12.10 20：00开播</div>
+            </div>
+        </div>
+        <div class="di">
+        	<a href="#">点击展开查看全部</a>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+	<div class="in">
+    	<p>首页<span>|</span>  关于我们<span>|</span> 加入我们<span>|</span>合作专区<span>|</span>联系我们<span>|</span>AI开放平台<span>|</span> 意见反馈<span>|</span>漏洞提交<span>|</span>隐私政策<span>|</span>版权声明 <span>|</span>反盗链声明<span>|</span>网上有害信息举报<span>|</span>备案公示 <span>|</span> 营业执照 <span>|</span> 教师资格证公示<br>
+京ICP备 13030888号 Copyright © 2014-2019 行者信息科技（北京）有限公司 <span>|</span> 地址：北京市新华区马当路388号C座 <span>|</span> 电话：010-66666666 <span>|</span>京公网安备 01010102002533号<br>
+京网文〔2018〕4086-308号<span>|</span> 网络文化经营许可证：沪网文[2018]4086-308号 <span>|</span>增值电信业务经营许可证：京B2-20150021 <span>|</span> 食品经营许可证：JY13101140088888<br>
+医疗器械经营许可证：京嘉食药监械经营许20188008号 <span>|</span> 互联网药品信息服务资格证书：(京)-经营性-2018-0011 | </p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,826 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+
+<style>
+*{
+	margin:0;
+	padding:0;
+	}
+img{
+	border:0;
+	}
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+	}
+body{
+	font-family:"微软雅黑";
+	background-color:#fafafa;
+	}
+a{
+   text-decoration:none;
+	}
+ul{
+	 list-style:none;
+	 }
+.in{
+	width:1180px;
+	margin:0 auto;
+	}
+.clear{
+	clear:both;
+	}
+select{
+	width:180px;
+	height:40px;
+	border-color:#80c4ae;
+	}
+
+#header{
+	height:80px;
+	}
+.head{
+	height:80px;
+	box-shadow:0 3px 5px 0 #dddfe2;
+	}
+.logo{
+	float:left;
+	margin-top:14px;
+	}
+.top-r{
+	height:80px;
+	width:950px;
+	float:right;
+	}
+.top-r ul{
+	height:80px;
+	float:right;
+	}
+.top-r li{
+	float:left;
+	}
+#li2{
+	background-color:#80c4ae;
+	}
+#li2 a{
+	color:#fff;
+	}
+#li4{
+	margin-right:93px;
+	}
+#li6 a{
+	display:inline;
+	}
+.top-r a{
+	color:#333;
+	display:block;
+	height:80px;
+	width:108px;
+	text-align:center;
+	font-size:16px;
+	line-height:80px;
+	}
+.top-r a:hover{
+	background-color:#80c4ae;
+	}
+.ssk{
+	width:280px;
+	height:36px;
+	border:1px #81cfbd solid;
+	border-radius:3px;
+	margin-top:22px;
+	margin-right:22px;
+	}
+.ssk-l{
+	width:68px;
+	height:36px;
+	border-right:1px #81cfbd solid;
+	float:left;
+	}
+.ssk-l h2{
+	height:36px;
+	line-height:36px;
+	font-size:14px;
+	color:#81cfbd;
+	text-align:center;
+	}
+.kc{
+	float:left;
+	width:45px;
+	height:36px;
+	margin-left:5px;
+	}
+.t1{
+	float:right;
+	margin-right:6px;
+	line-height:36px;
+	}
+.ssk-r{
+	float:right;
+	width:210px;
+	height:36px;
+	}
+.ss{
+	width:165px;
+	height:36px;
+	line-height:36px;
+	font-size:12px;
+	color:#a9a9a9;
+	float:left;
+	margin-left:5px;
+	}
+#ssan{
+	float:right;
+	}
+#ssan a{
+	display:inline;
+	height:36px;
+	line-height:36px;
+	}
+	
+#banner{
+	height:366px;
+	padding-top:36px;
+	background-image:url(images/1_03.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	}
+
+#link{
+	position:fixed;
+	top:552px;
+	right:253px;
+	}
+
+#main{
+	height:2146px;
+	padding-top:3px;
+	}
+.m1{
+	height:558px;
+	}
+.tbbt{
+	width:1181px;
+	height:66px;
+	}
+.lx{
+	margin-top:23px;
+	float:left;
+	font-size:20px;
+	line-height:20px;
+	height:20px;
+	border-left:5px #80c4ae solid;
+	margin-right:12px;
+	}
+.tb-l{
+	margin-top:23px;
+	float:left;
+	font-size:20px;
+	line-height:20px;
+	text-align:center;
+	color:#333333;
+	}
+.tb-r{
+	float:right;
+	font-size:14px;
+	line-height:66px;
+	text-align:center;
+	color:#74c6b3;
+	}
+.tb-r img{
+	height:11px;
+	line-height:66px;
+	margin-top:20px;
+	}
+.tbkc{
+	height:224px;
+	padding-bottom:22px;
+	width:1181px;
+	}
+.yw{
+	 height:224px;
+	 width:280px;
+	 background-image:url(images/1_28.jpg);
+	 box-shadow:0 3px 5px 0 #dddfe2;
+	 float:left;
+	 margin-right:20px;
+	 }
+.ct{
+	height:163px;
+	width:280px;
+	position:relative;
+	}
+.yc{
+	display:none;
+	}
+.yw:hover .yc{
+	display:block;
+	}
+.zxrs{
+	width:280px;
+	height:33px;
+	font-size:12px;
+	line-height:33px;
+	color:#fff;
+	position:absolute;
+	bottom:0;
+	left:0;
+	background-color:rgba(0,0,0,0.5);
+	}
+.zxrs p{
+	margin-left:14px;
+	}
+.rjb{
+	width:71px;
+	height:33px;
+	font-size:12px;
+	line-height:33px;
+	color:#fff;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:rgba(0,0,0,0.5);
+	border-radius:0 0 6px 0;
+	}
+.rjb p{
+	margin-left:14px;
+	}
+.gl{
+	height:61px;
+	width:280px;
+	}
+.gl h2{
+	margin-top:2px;
+	font-size:15px;
+	line-height:31px;
+	color:#565656;
+	margin-left:11px;
+	}
+.gl p{
+	font-size:12px;
+	margin-left:11px;
+	color:#a1a1a1;
+	float:left;
+	}
+.jg{
+	height:31px;
+	width:87px;
+	background-color:#74c6b3;
+	border-radius:5px;
+	font-size:14px;
+	line-height:31px;
+	color:#f0f2f5;
+	float:right;
+	text-align:center;
+	margin-right:11px;
+	margin-top:-16px;
+	}
+.jg a{
+	height:31px;
+	width:87px;
+	display:block;
+	font-size:14px;
+	line-height:31px;
+	color:#f0f2f5;
+	}
+#tb4{
+	margin-right:0;
+	}
+.m2{
+	height:186px;
+	padding-top:5px;
+	padding-bottom:5px;
+	}
+.m3{
+	height:554px;
+	padding-top:20px;
+	}	
+.bj{
+	 height:224px;
+	 width:380px;
+	 background-image:url(images/1_22_03.jpg);
+	 box-shadow:0 3px 5px 0 #dddfe2;
+	 float:left;
+	 margin-right:20px;
+	 }
+.bj:hover .yc{
+	display:block;
+	}
+.zxrs1{
+	width:380px;
+	height:33px;
+	font-size:12px;
+	line-height:33px;
+	color:#fff;
+	position:absolute;
+	bottom:0;
+	left:0;
+	background-color:rgba(0,0,0,0.5);
+	}
+.zxrs1 h2{
+	height:33px;
+	font-size:12px;
+	line-height:33px;
+	color:#fff;
+	float:right;
+	margin-right:24px;
+	}
+	
+.zxrs1 p{
+	margin-left:14px;
+	float:left;
+	}
+.g2{
+	height:61px;
+	width:380px;
+	}
+.g2 h2{
+	margin-top:2px;
+	font-size:15px;
+	line-height:31px;
+	color:#565656;
+	margin-left:11px;
+	}
+.g2 p{
+	font-size:12px;
+	margin-left:11px;
+	color:#a1a1a1;
+	float:left;
+	}
+.jg1{
+	height:31px;
+	width:74px;
+	background-color:#74c6b3;
+	border-radius:5px;
+	font-size:14px;
+	line-height:31px;
+	color:#f0f2f5;
+	float:right;
+	text-align:center;
+	margin-right:11px;
+	margin-top:-16px;
+	}
+.jg1 a{
+	display:block;
+	height:31px;
+	width:74px;
+	font-size:14px;
+	line-height:31px;
+	color:#f0f2f5;
+	}
+#b3{
+	margin-right:0;
+	}
+.m4{
+	height:539px;
+	padding-top:20px;
+	}
+.m4-l{
+	width:876px;
+	height:474px;
+	float:left;
+	}
+.m4-r{
+	height:474px;
+	height:283px;
+	float:right;
+	}
+.m5{
+	height:196px;
+	padding-top:46px;
+	}
+.m5 li{
+	float:left;
+	margin-right:20px;
+	}
+#a3{
+	margin-right:0px;
+	}
+	
+	
+#footer{
+	height:200px;
+	padding-top:64px;
+	background-color:#333333;
+	}
+#footer p{
+	line-height:38px;
+	font-size:12px;
+	color:#f0f2f5;
+	text-align:center;
+	}
+#footer span{
+	margin-left:10px;
+	margin-right:8px;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header">
+	<div class="head">
+    	<div class="in">
+        	<div class="logo"><img src="images/images_05.jpg"></div>
+            <div class="top-r">
+            	<ul>
+                	<li id="li2"><a href="index.html">首页</a></li>
+                    <li><a href="tongbu.html">同步课程</a></li>
+                    <li><a href="zaixian.html">在线练习</a></li>
+                    <li id="li4"><a href="#">精品课程</a></li>
+                    <li><div class="ssk">
+                    		<div class="ssk-l">
+                            	<div class="kc"><h2>课程</h2></div>
+                                <div class="t1"><img src="images/1_06.jpg"></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="ssk-r">
+                            	<div class="ss">搜索感兴趣的内容</div>
+                                <div id="ssan"><a href="#"><img src="images/1_04.jpg"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="li6"><a href="#">登录</a>&nbsp;&nbsp;/&nbsp;<a href="#">注册</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="banner"></div>
+
+<div id="link">
+	<ul>
+    	<li><a href="#"><img src="images/1_13.jpg"></a></li>
+        <li><a href="#"><img src="images/1_12.jpg"></a></li>
+        <li><a href="#"><img src="images/1_14.jpg"></a></li>
+    </ul>
+</div>
+
+<div id="main">
+    <div class="m1">
+        <div class="in">
+            <div class="tbbt"> 
+            	<div class="lx"></div>               	
+                <div class="tb-l">同步课程</div>
+                <div class="tb-r">更多课程&nbsp;<img src="images/1_07.jpg"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="tbkc">
+               <div class="yw">
+                	<div class="ct">
+                    	<img src="images/1_09.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+                <div class="yw">
+                	<div class="ct">
+                    	<img src="images/1_09.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+                <div class="yw">
+                	<div class="ct">
+                    	<img src="images/1_09.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+                <div class="yw" id="tb4">
+                	<div class="ct">
+                    	<img src="images/1_09.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+            </div>
+            <div class="clear"></div>
+            <div class="tbbt"> 
+            	<div class="lx"></div>               	
+                <div class="tb-l">同步课程</div>
+                <div class="tb-r">更多课程&nbsp;<img src="images/1_07.jpg"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="tbkc">
+               <div class="yw">
+                	<div class="ct">
+                    	<img src="images/1_09.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+                <div class="yw">
+                	<div class="ct">
+                    	<img src="images/1_09.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+                <div class="yw">
+                	<div class="ct">
+                    	<img src="images/1_09.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+                <div class="yw" id="tb4">
+                	<div class="ct">
+                    	<img src="images/1_09.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+            </div>
+    	</div>    
+    </div>
+    <div class="m2">
+    	<div class="in">
+        	<img src="images/1_17.jpg">
+        </div>
+    </div>
+    <div class="m3">
+    	<div class="in">
+            <div class="tbbt"> 
+            	<div class="lx"></div>               	
+                <div class="tb-l">在线测试</div>
+                <div class="tb-r">更多练习&nbsp;<img src="images/1_07.jpg"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="tbkc">
+               <div class="bj">
+                	<div class="ct">
+                    	<img src="images/1_20.jpg">
+                        <div class="yc">
+                        	<div class="zxrs1"><p>100人已经考试</p><h2>初一</h2></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="g2">
+                    	<div><h2>北京2020年6月中考试题</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg1"><a href="#">去考试</a></div>
+                    </div>	
+                </div> 
+                <div class="bj">
+                	<div class="ct">
+                    	<img src="images/1_20.jpg">
+                        <div class="yc">
+                        	<div class="zxrs1"><p>100人已经考试</p><h2>初一</h2></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="g2">
+                    	<div><h2>北京2020年6月中考试题</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg1"><a href="#">去考试</a></div>
+                    </div>	
+                </div>
+                <div class="bj" id="b3">
+                	<div class="ct">
+                    	<img src="images/1_20.jpg">
+                        <div class="yc">
+                        	<div class="zxrs1"><p>100人已经考试</p><h2>初一</h2></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="g2">
+                    	<div><h2>北京2020年6月中考试题</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg1"><a href="#">去考试</a></div>
+                    </div>	
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="tbkc">
+               <div class="bj">
+                	<div class="ct">
+                    	<img src="images/1_20.jpg">
+                        <div class="yc">
+                        	<div class="zxrs1"><p>100人已经考试</p><h2>初一</h2></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="g2">
+                    	<div><h2>北京2020年6月中考试题</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg1"><a href="#">去考试</a></div>
+                    </div>	
+                </div> 
+                <div class="bj">
+                	<div class="ct">
+                    	<img src="images/1_20.jpg">
+                        <div class="yc">
+                        	<div class="zxrs1"><p>100人已经考试</p><h2>初一</h2></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="g2">
+                    	<div><h2>北京2020年6月中考试题</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg1"><a href="#">去考试</a></div>
+                    </div>	
+                </div>
+                <div class="bj" id="b3">
+                	<div class="ct">
+                    	<img src="images/1_20.jpg">
+                        <div class="yc">
+                        	<div class="zxrs1"><p>100人已经考试</p><h2>初一</h2></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="g2">
+                    	<div><h2>北京2020年6月中考试题</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg1"><a href="#">去考试</a></div>
+                    </div>	
+                </div>
+            </div>
+    	</div>  
+    </div>
+    <div class="m4">
+    	<div class="in">
+        	<div class="tbbt"> 
+            	<div class="lx"></div>               	
+                <div class="tb-l">精品课堂</div>
+                <div class="tb-r">更多课程&nbsp;<img src="images/1_07.jpg"></div>
+            </div>
+        	<div class="m4-l">
+            	 <div class="tbkc">
+               		<div class="yw">
+                		<div class="ct">
+                    		<img src="images/1_26.jpg">
+                        	<div class="yc">
+                        		<div class="zxrs"><p>1100人正在学习</p></div>
+                        		<div class="rjb"><p>人教版</p></div>
+                        	</div>
+                    	</div>
+                    	<div class="gl">
+                    		<div><h2>行政管理专业班</h2></div>
+                    		<div><p>23课时</p></div>
+                    		<div class="jg"><a href="#">免费学习</a></div>
+                    	</div>	
+                	</div> 
+                <div class="yw">
+                	<div class="ct">
+                    	<img src="images/1_26.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+                <div class="yw" id="tb4">
+                	<div class="ct">
+                    	<img src="images/1_26.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+            </div>
+            	<div class="clear"></div>
+                <div class="tbkc">
+               		<div class="yw">
+                		<div class="ct">
+                    		<img src="images/1_26.jpg">
+                        	<div class="yc">
+                        		<div class="zxrs"><p>1100人正在学习</p></div>
+                        		<div class="rjb"><p>人教版</p></div>
+                        	</div>
+                    	</div>
+                    	<div class="gl">
+                    		<div><h2>行政管理专业班</h2></div>
+                    		<div><p>23课时</p></div>
+                    		<div class="jg"><a href="#">免费学习</a></div>
+                    	</div>	
+                	</div> 
+                <div class="yw">
+                	<div class="ct">
+                    	<img src="images/1_26.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+                <div class="yw" id="tb4">
+                	<div class="ct">
+                    	<img src="images/1_26.jpg">
+                        <div class="yc">
+                        	<div class="zxrs"><p>1100人正在学习</p></div>
+                        	<div class="rjb"><p>人教版</p></div>
+                        </div>
+                    </div>
+                    <div class="gl">
+                    	<div><h2>行政管理专业班</h2></div>
+                    	<div><p>23课时</p></div>
+                    	<div class="jg"><a href="#">免费学习</a></div>
+                    </div>	
+                </div> 
+            </div>
+           		<div class="clear"></div>
+            </div>
+            <div class="m4-r"><img src="images/1_30.jpg"></div>
+        </div>
+    </div>
+    <div class="m5">
+    	<div class="in">
+        	<ul>
+            	<li><a href="tongbu.html"><img src="images/1_34.jpg"></a></li>
+                <li><a href="zaixian.html"><img src="images/1_36.jpg"></a></li>
+                <li id="a3"><a href="#"><img src="images/1_38.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+	<div class="in">
+    	<p>首页<span>|</span>  关于我们<span>|</span> 加入我们<span>|</span>合作专区<span>|</span>联系我们<span>|</span>AI开放平台<span>|</span> 意见反馈<span>|</span>漏洞提交<span>|</span>隐私政策<span>|</span>版权声明 <span>|</span>反盗链声明<span>|</span>网上有害信息举报<span>|</span>备案公示 <span>|</span> 营业执照 <span>|</span> 教师资格证公示<br>
+京ICP备 13030888号 Copyright © 2014-2019 行者信息科技（北京）有限公司 <span>|</span> 地址：北京市新华区马当路388号C座 <span>|</span> 电话：010-66666666 <span>|</span>京公网安备 01010102002533号<br>
+京网文〔2018〕4086-308号<span>|</span> 网络文化经营许可证：沪网文[2018]4086-308号 <span>|</span>增值电信业务经营许可证：京B2-20150021 <span>|</span> 食品经营许可证：JY13101140088888<br>
+医疗器械经营许可证：京嘉食药监械经营许20188008号 <span>|</span> 互联网药品信息服务资格证书：(京)-经营性-2018-0011 | </p>
+    </div>
+</div>
+
+</body>
+</html>
