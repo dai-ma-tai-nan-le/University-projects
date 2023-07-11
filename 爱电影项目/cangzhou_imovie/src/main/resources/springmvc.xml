@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.3.xsd
+     http://www.springframework.org/schema/mvc
+     http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+    <!--开启面向切面编程（非必须）-->
+    <!--你若想进行手动面向切面编程，就是必须的了-->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+
+
+    <!--加载controller组件（必须的）-->
+    <!--在指定包下扫描被Controller注解标注的类-->
+    <!--在back工程下创建com.offcn.imovie.controller包，该包用来存放controller类，例如：UserController，MovieController...-->
+    <context:component-scan base-package="com.offcn.imovie.controller" use-default-filters="false">
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Service" />
+    </context:component-scan>
+
+
+    <!--注册转换器-->
+    <mvc:annotation-driven />
+
+    <!--必须的-->
+    <!--加载springmvc框架的两个组件，处理器适配器，处理器映射器-->
+    <mvc:default-servlet-handler />
+
+    <!--必须的-->
+    <!--配置springmvc的第三个必要组件，视图解析器-->
+    <!--例如：在controller做视图跳转，转发到某一个jsp页面上，由该组件实现-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
+
+    <!--非必须-->
+    <!--如果不需要文件上传就可以不加-->
+    <!--文件上传解析器，例如，你想做文件上传，该组件就是必须的-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10285760" />
+        <property name="defaultEncoding" value="utf-8" />
+    </bean>
+</beans>

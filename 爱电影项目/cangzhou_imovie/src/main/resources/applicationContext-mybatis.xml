@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!--mybatis框架通过使用sqlSession对象操作数据库（执行sql）-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--这个工厂需要两个对象-->
+        <!--数据源对象，在db.xml-->
+        <property name="dataSource" ref="dataSource" />
+        <!--分页插件-->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <value>
+                            helperDialect=mysql
+                            reasonable=true
+                            supportMethodsArguments=true
+                            params=count=countSql
+                            autoRuntimeDialect=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+    </bean>
+
+    <!--mybatis框架dao接口的扫描器-->
+    <!--从com.offcn.imovie.dao包下扫描dao接口，并且创建dao接口的代理实现类-->
+    <!--需要自己在dao工程下，手动创建com.offcn.imovie.dao包-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.offcn.imovie.dao" />
+    </bean>
+
+</beans>
