@@ -1,0 +1,91 @@
+spring:
+  application:
+    name: 学生自律管理系统
+#    //加载静态图片
+  mvc: static-path-pattern= /**
+
+#  //文件大小
+  servlet:
+    multipart:
+      max-request-size: 2000MB
+      max-file-size: 2000MB
+
+
+  redis:
+    host: 127.0.0.1
+    password:
+  #redis端口，默认6379
+    port: 6379
+    pool:
+      max-actice=10
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: resources/**
+  freemarker:
+    cache: false    #页面不加载缓存，修改即时生效
+
+
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/xszlglxt?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: '000000'
+
+#开启mp的日志(输出到控制台)
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      insert-strategy:
+        not_null update-strategy: not_null 1 2 3 4
+## mybatis-plus相关配置
+#mybatis-plus:
+#  type-aliases-package: com.ljp.demo.entity
+#  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
+#  mapper-locations: classpath:mapper/*.xml
+#  # 以下配置均有默认值,可以不设置
+#  global-config:
+#              db-config:
+#                #主键类型 AUTO:"数据库ID自增" INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+#                id-type: auto
+#                logic-delete-value: -1
+#                logic-not-delete-value: 0
+#                logic-delete-field: is_delete
+#                #字段策略 IGNORED:"忽略判断"  NOT_NULL:"非 NULL 判断")  NOT_EMPTY:"非空判断"
+#                field-strategy: NOT_EMPTY
+#                #数据库类型
+#                db-type: MYSQL
+#              banner: false
+#  configuration:
+#    # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+#    map-underscore-to-camel-case: true
+#    # 如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
+#    call-setters-on-nulls: true
+#    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    cache-enabled: false
+#    jdbc-type-for-null: 'null'
+
+#server:
+#  tomcat:
+#    uri-encoding: utf-8
+#  servlet:
+#    context-path: /xszlglxt
+#  port: 8080
+
+
+
+
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印sql日志
+#  mapper-locations: classpath:mapper/*.xml # 指定mapper.xml位置
+#  global-config:
+#    db-config:
+#      id-type: auto # 主键策略
+#  # 分页插件配置
+#  plugins:
+#    - paginationInterceptor
