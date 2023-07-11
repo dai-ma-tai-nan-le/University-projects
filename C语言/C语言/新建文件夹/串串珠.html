@@ -1,0 +1,304 @@
+<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>wujinjian</title>
+        <script type="text/javascript">
+            var obj=
+            {
+                //行数
+                rows:12,//12
+                //列数
+                cols:11,//11
+                //记录选中球周围的同色球的td对象
+                arrBall:null,
+                //向右整体移动时，记录左边的空行数
+                nullcol:0,
+
+                imgarr:new Array("http://i3.6.cn/cvbnm/2d/09/1b/a8a3c16e83db7628b256791ab4e0df9e.gif",
+                                "http://i3.6.cn/cvbnm/7d/d9/08/3da5c4034a7f5b2c02e297c0960f7d8a.gif",
+                                "http://i3.6.cn/cvbnm/1e/b7/b6/2606486ac70d45dfa703ec59982413c4.gif",
+                                "http://i3.6.cn/cvbnm/e5/d1/8d/342243e5d16905c301ce6934f262da4b.gif",
+                                "http://i3.6.cn/cvbnm/dc/5c/86/2ab9704d95b4cdb4a7b0e8d53d22acdd.gif"),
+                
+                //创建游戏界面
+                createTable:function()
+                {
+                    var tabobj=document.createElement("table");
+                    tabobj.style.border="black solid 1px";
+                    tabobj.cellSpacing="0";
+                    tabobj.cellPadding="0";
+                    tabobj.style.width=obj.cols*40+"px";
+                    tabobj.style.height=obj.rows*40+"px";
+
+                    var tbodyobj=document.createElement("tbody");
+
+                    tabobj.appendChild(tbodyobj);
+
+                    for(var i=0;i<obj.rows;i++)
+                    {
+                        var trobj=document.createElement("tr");
+
+                        for(var j=0;j<obj.cols;j++)
+                        {
+                            var tdobj=document.createElement("td");
+                            tdobj.id=i+"_"+j;
+                            tdobj.style.width="40px";
+                            tdobj.style.height="40px";
+                            tdobj.style.border="white solid 1px";
+                            
+                            tdobj.onclick=obj.getSelectBall;
+
+                            var imgobj=document.createElement("img");
+                            imgobj.src=obj.imgarr[obj.randomBall()];
+
+                            tdobj.appendChild(imgobj);
+
+                            trobj.appendChild(tdobj);
+                        }
+
+                        tbodyobj.appendChild(trobj);
+                    }
+
+                    tabobj.appendChild(tbodyobj);
+                    document.getElementById("mapid").appendChild(tabobj);
+                },
+                
+                //随机五彩球
+                randomBall:function()
+                {
+                    var v=Math.round(Math.random()*10);
+                    while(v>4)
+                    {
+                         v=Math.round(Math.random()*10);
+                    }
+                    return v;
+                },
+                
+                getSelectBall:function()
+                {
+                    //if(this.style.border=="white 1px solid")
+                    if(this.style.border.indexOf("white")!=-1)
+                    {
+                        //取消刚刚选中的球
+                        if(obj.arrBall!=null)
+                        {
+                            for(var i=0;i<obj.arrBall.length;i++)
+                            {
+                                obj.arrBall[i].style.border="white solid 1px";
+                            }
+
+                            obj.arrBall=null;
+                        }
+
+                        obj.arrBall=new Array();
+                        //往数组中添加第一个球，也就是点中的那个球
+                        obj.arrBall[obj.arrBall.length]=obj.getTdObj(this.id);
+                        obj.getAllLineBall();
+                    }
+                    else
+                    {
+                        //消隐
+                        obj.hiddenBall();
+                    }
+                },
+                //获取每个球的四方位上相同的球
+                getAllLineBall:function()
+                {
+                    var imgsrc=obj.arrBall[0].getElementsByTagName("img")[0].src;
+                    
+                    //获取每个球的四方位上相同的球
+                    for(var i=0;i<obj.arrBall.length;i++)
+                    {
+                        var iandj=obj.arrBall[i].id.split("_");
+                        
+                        //判读点中的这个球四个方位上是否有同样的球，有则添加到数组
+                        if(iandj[0]-1>=0 && obj.isExistsImg(iandj[0]-1+"_"+iandj[1])) //上
+                        {
+                            if(obj.getImgObj(iandj[0]-1+"_"+iandj[1]).src==imgsrc)
+                            {
+                                if(obj.isExists(obj.getTdObj(iandj[0]-1+"_"+iandj[1]))) //不含有，则添加
+                                    obj.arrBall[obj.arrBall.length]=obj.getTdObj(iandj[0]-1+"_"+iandj[1]);
+                            }
+                        }
+                        
+                        if(iandj[1]-0+1<obj.cols && obj.isExistsImg(iandj[0]+"_"+(iandj[1]-0+1))) //右
+                        {
+                            if(obj.getImgObj(iandj[0]+"_"+(iandj[1]-0+1)).src==imgsrc)
+                            {
+                                if(obj.isExists(obj.getTdObj(iandj[0]+"_"+(iandj[1]-0+1)))) 
+                                    obj.arrBall[obj.arrBall.length]=obj.getTdObj(iandj[0]+"_"+(iandj[1]-0+1));
+                            }
+                        }
+                        
+                        if(iandj[0]-0+1<obj.rows && obj.isExistsImg(iandj[0]-0+1+"_"+iandj[1])) //下
+                        {
+                            if(obj.getImgObj(iandj[0]-0+1+"_"+iandj[1]).src==imgsrc)
+                            {
+                                if(obj.isExists(obj.getTdObj(iandj[0]-0+1+"_"+iandj[1]))) 
+                                    obj.arrBall[obj.arrBall.length]=obj.getTdObj(iandj[0]-0+1+"_"+iandj[1]);
+                            }
+                        }
+                        
+                        if(iandj[1]-1>=0 && obj.isExistsImg(iandj[0]+"_"+(iandj[1]-1))) //左
+                        {
+                            if(obj.getImgObj(iandj[0]+"_"+(iandj[1]-1)).src==imgsrc)
+                            {
+                                if(obj.isExists(obj.getTdObj(iandj[0]+"_"+(iandj[1]-1))))
+                                    obj.arrBall[obj.arrBall.length]=obj.getTdObj(iandj[0]+"_"+(iandj[1]-1));
+                            }
+                        }
+                    }
+                    
+                    //显示选中的球
+                    if(obj.arrBall.length>1)
+                    {
+                        for(var i=0;i<obj.arrBall.length;i++)
+                        {
+                            obj.arrBall[i].style.border="gray solid 1px";
+                        }
+                    }
+                },
+                //获取td对象
+                getTdObj:function(id)
+                {
+                    return document.getElementById(id);
+                },
+                //根据td的id获取img的对象
+                getImgObj:function(tdid)
+                {
+                    return obj.getTdObj(tdid).getElementsByTagName("img")[0];
+                },
+                //判读是否含有球的img
+                isExistsImg:function(tdid)
+                {
+                    if(obj.getTdObj(tdid).getElementsByTagName("img")[0]==null)
+                        return false;
+                    return true;
+                },
+                //判读数组里是否含有此球的td
+                isExists:function(tdobj)
+                {
+                    for(var i=0;i<obj.arrBall.length;i++)
+                    {
+                        if(obj.arrBall[i]==tdobj)
+                            return false;//含有
+                    }
+                    return true;
+                },
+                
+                //删除球
+                hiddenBall:function()
+                {
+                    for(var i=0;i<obj.arrBall.length;i++)
+                    {
+                        obj.arrBall[i].removeChild(obj.arrBall[i].getElementsByTagName("img")[0]);
+                    }
+
+                    obj.autoDown();
+                },
+                
+                //使球自动往下填充空的td
+                autoDown:function()
+                {
+                    obj.sortarrBall();
+
+                    for(var j=0;j<obj.arrBall.length;j++)
+                    {
+                        var iandj=obj.arrBall[j].id.split("_");
+                        var tdi=iandj[0]-0;
+                        var tdj=iandj[1]-0;
+
+                        for(var i=tdi;i>0;i--)
+                        {
+                            if(obj.getTdObj((i-1)+"_"+tdj).getElementsByTagName("img")[0]!=null)
+                                obj.getTdObj(i+"_"+tdj).appendChild(obj.getTdObj((i-1)+"_"+tdj).getElementsByTagName("img")[0]);
+                            else
+                                break;
+                        }    
+                    }
+                    
+                    //得分
+                    document.getElementById("fs").value=document.getElementById("fs").value-0+obj.arrBall.length;
+
+                    //取消选中
+                    for(var i=0;i<obj.arrBall.length;i++)
+                    {
+                        obj.arrBall[i].style.border="white solid 1px";
+
+                        obj.autoRight();
+                    }
+                },
+                
+                //向右移动
+                autoRight:function()
+                {
+                    for(var i=obj.nullcol;i<obj.cols;i++)
+                    {
+                        var temp=0;
+                        for(var j=0;j<obj.rows;j++)
+                        {
+                            if(obj.isExistsImg(j+"_"+i))
+                            {
+                                temp=1;
+                                break;
+                            }
+                        }
+                        if(temp==0)
+                        {
+                            obj.moveRight(i);
+                        }
+                    }
+                },
+                
+                //一列一列的往右移
+                moveRight:function(kh)
+                {
+                    for(var i=kh-1;i>=obj.nullcol;i--)
+                    {
+                        for(var j=0;j<obj.rows;j++)
+                        {
+                            if(obj.getImgObj(j+"_"+i)!=null)
+                            {
+                                obj.getTdObj(j+"_"+(i+1)).appendChild(obj.getImgObj(j+"_"+i));
+                            }
+                        }
+                    }
+                    obj.nullcol++;
+                },
+
+                // 将arrBall数组根据id从小到大排序
+                sortarrBall:function()
+                {
+                    for(var j=0;j<obj.arrBall.length;j++)
+                    {
+                        for(var i=0;i<obj.arrBall.length-1-j;i++)
+                        {
+                            if(obj.arrBall[i].id.split("_")[0]-0>obj.arrBall[i+1].id.split("_")[0]-0)
+                            {
+                                var temp=obj.arrBall[i];
+                                obj.arrBall[i]=obj.arrBall[i+1];
+                                obj.arrBall[i+1]=temp;
+                            }
+                        }
+                    }
+                }
+            }
+
+            window.onload=obj.createTable;
+        </script>
+    </head>
+    <body style="font-size:10pt">
+        <div id="mapid" style="width:100%" align="center">
+            <table>
+                <tr>
+                    <td>
+                        <input type="button" value="新游戏" onclick="javascript:window.location.href=window.location.href">&nbsp;&nbsp;&nbsp;&nbsp;
+                        分数:<input id="fs" type="text" readonly style="border:none;">
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
