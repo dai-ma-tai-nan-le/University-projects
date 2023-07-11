@@ -1,0 +1,36 @@
+	<script type="text/javascript">
+		$.ajaxSetup({
+				error:function (xhr) {
+					if(xhr.responseText==4){
+						if(xhr.status==404){
+							alert("地址不存在");
+						}else if(xhr.status==500){
+							alert("服务器错误");
+						}else if(xhr.status==0){
+							alert("网络异常");
+						}else{
+							alert("未知错误");
+						}
+					}
+				}
+			});
+		function submitForm(){
+			//判断
+			if($("#name").val()==null||$("#name").val().trim().length==0){
+				alert("收件人不能为空");
+				return;
+			}
+			if($("#phone").val()==null||$("#phone").val().trim().length==0){
+				alert("手机号不能为空");
+				return;
+			}
+			if($("#detail").val()==null||$("#detail").val().trim().length==0){
+				alert("详细地址不能为空");
+				return;
+			}
+			//获取参数
+			$.post("userservlet?method=addAddress",$("#form1").serialize(),function (){
+				window.location="userservlet?method=getAddress";
+			});
+		}
+	</script>
